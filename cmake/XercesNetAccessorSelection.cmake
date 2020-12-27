@@ -31,6 +31,9 @@ if(network)
 
   # Requires select() which is UNIX only
   if(UNIX)
+    if(HUNTER_ENABLED)
+      hunter_add_package(CURL)
+    endif()
     find_package(CURL)
     if(CURL_FOUND)
       list(APPEND netaccessors curl)

@@ -19,4 +19,8 @@
 
 # Determine if ICU is available
 
+if(HUNTER_ENABLED)
+  hunter_add_package(ICU)
+endif()
+
 find_package(ICU COMPONENTS uc data)

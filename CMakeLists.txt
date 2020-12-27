@@ -32,6 +32,13 @@ if (POLICY CMP0067)
   cmake_policy(SET CMP0067 NEW)
 endif(POLICY CMP0067)
 
+include(cmake/HunterGate.cmake)
+
+HunterGate(
+	URL "https://github.com/cpp-pm/hunter/archive/v0.23.288.tar.gz"
+	SHA1 "6c9b2bc606d86ae31f96a62fc68f0a593024815b"
+)
+
 # Try C++14, then fall back to C++11 and C++98.  Used for feature tests
 # for optional features.
 set(CMAKE_CXX_STANDARD 14)
